@@ -146,10 +146,10 @@ Instance.new("UICorner", discordBtn).CornerRadius = UDim.new(0, 8)
 local function copyToClipboard(link)
     if setclipboard then
         pcall(setclipboard, link)
-        notify("WataX", "Link disalin ke clipboard", 3)
+        notify("zyn", "Link disalin ke clipboard", 3)
         return true
     else
-        notify("WataX", "Fitur salin tidak tersedia di executor ini", 4)
+        notify("zyn", "Fitur salin tidak tersedia di executor ini", 4)
         print("Link (copy manual):", link)
         return false
     end
@@ -200,7 +200,7 @@ local function doVerify()
 
     if not ok then
         status.Text = "⚠️ Error saat verifikasi."
-        notify("WataX", "Gagal memeriksa daftar (error).", 4)
+        notify("zyn", "Gagal memeriksa daftar (error).", 4)
         return
     end
 
@@ -223,7 +223,7 @@ local function doVerify()
         if gui and gui.Parent then gui:Destroy() end
     else
         status.Text = "❌ KAMU TIDAK TERDAFTAR SEBAGAI VIP USER"
-        _G.WataX_Replay = false
+        _G.zyn_Replay = false
         notify("Zyyn", "❌ Kamu belum terdaftar untuk menggunakan fitur ini.", 4)
     end
 end
